@@ -28,14 +28,24 @@ Our app will display random numbers and requires the user to type them in, in th
 
 Functional requirements
 
-Display Main Menu to start or quit the application when the app is opened
-Game displays the sequence of numbers at the top of the screen, starting with only one number displayed
-User can click enter once done looking at the sequence of numbers which makes the app hide the sequence of numbers
-Display input box for user to input the numbers after sequence is hidden 
-Display submit button underneath input box for user to click after numbers are inputted
-Game adds a new number to the sequence after each round the user passes 
-Scoreboard is displayed on the side of the screen throughout the game of how many rounds the user has passed
-Game displays correct sequence after the user has inputted the wrong one and ends the game 
-At the end of the game the total number of rounds passed is displayed in the middle of the screen 
-User is taken back to main menu after the game is finished
-App will be compatible with all android devices and should function well whether in portrait or landscape mode 
+- Display Main Menu to start or quit the application when the app is opened
+
+- Game displays the sequence of numbers at the top of the screen, starting with only one number displayed
+
+- User can click enter once done looking at the sequence of numbers which makes the app hide the sequence of numbers
+
+- Display input box for user to input the numbers after sequence is hidden 
+
+- Display submit button underneath input box for user to click after numbers are inputted
+
+- Game adds a new number to the sequence after each round the user passes 
+
+- Scoreboard is displayed on the side of the screen throughout the game of how many rounds the user has passed
+
+- Game displays correct sequence after the user has inputted the wrong one and ends the game
+
+- At the end of the game the total number of rounds passed is displayed in the middle of the screen 
+
+- User is taken back to main menu after the game is finished
+
+- App will be compatible with all android devices and should function well whether in portrait or landscape mode 
