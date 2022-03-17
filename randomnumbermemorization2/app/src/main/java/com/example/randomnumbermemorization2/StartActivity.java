@@ -22,13 +22,13 @@ public class StartActivity extends AppCompatActivity {
         enterbutton = findViewById(R.id.enterbutton);
         textviewlevel = (TextView) findViewById(R.id.textview_level);
         String thescore5 = getIntent().getStringExtra("thescore");
+        String thestring = getIntent().getStringExtra("key");
         if(thescore5!=null) {
             textviewlevel.setText("Level " + thescore5);
         }
         else {
-            textviewlevel.setText("Level "+currentlevel);
+            textviewlevel.setText("Level "+ (thestring.length()-2));
         }
-        String thestring = getIntent().getStringExtra("key");
 
         enterbutton.setOnClickListener(new View.OnClickListener() {
             @Override

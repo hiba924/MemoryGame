@@ -19,11 +19,11 @@ public class Correctscreen extends AppCompatActivity {
         TextView thescore = (TextView) findViewById(R.id.thescore);
         int thescore2 = getIntent().getIntExtra("currentlevel", R.id.thescore);
         nextlevel = (Button) findViewById(R.id.nextlevel);
+        String correctsequence = getIntent().getStringExtra("correctstring").trim();
         nextlevel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 int thescore3 = thescore2;
-                String correctsequence = getIntent().getStringExtra("correctstring").trim();
                 String score = Integer.toString(thescore3);
                 Intent correctscreen = new Intent(Correctscreen.this, SeeSequenceActivity.class);
                 correctscreen.putExtra("thescore", score);
@@ -32,7 +32,8 @@ public class Correctscreen extends AppCompatActivity {
                 startActivity(correctscreen);
             }
         });
-        thescore.setText("Score: "+thescore2);
+        thescore.setText("Score: "+(correctsequence.length()));
+
 
     }
 }

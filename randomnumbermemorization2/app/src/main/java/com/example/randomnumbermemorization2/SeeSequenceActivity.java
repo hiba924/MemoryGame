@@ -20,8 +20,12 @@ public class SeeSequenceActivity extends AppCompatActivity {
         thebutton = (Button) findViewById(R.id.thebutton);
         thesequence = (TextView) findViewById(R.id.thesequence);
         String str = getIntent().getStringExtra("addontothis");
-        System.out.println("what is this string "+str);
-        str = str + sequencesomething.makeArray();
+        if(str==null) {
+            str = sequencesomething.makeArray();
+        }
+        else {
+            str = str + sequencesomething.makeArray();
+        }
         thesequence.setText(str);
         String finalStr = str;
         thebutton.setOnClickListener(new View.OnClickListener() {
