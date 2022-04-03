@@ -9,6 +9,11 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import java.io.Serializable;
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+import java.util.List;
+
 public class StartActivity extends AppCompatActivity {
 
     Button enterbutton;
@@ -19,6 +24,7 @@ public class StartActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start);
         EditText inputsequence = (EditText) findViewById(R.id.inputsequence);
+        inputsequence.requestFocus();
         enterbutton = findViewById(R.id.enterbutton);
         textviewlevel = (TextView) findViewById(R.id.textview_level);
         String thescore5 = getIntent().getStringExtra("thescore");
@@ -29,6 +35,7 @@ public class StartActivity extends AppCompatActivity {
         else {
             textviewlevel.setText("Level "+ (thestring.length()-2));
         }
+        ArrayList<String> players = getIntent().getStringArrayListExtra("players");
 
         enterbutton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -40,11 +47,13 @@ public class StartActivity extends AppCompatActivity {
                     Intent i = new Intent(StartActivity.this, Correctscreen.class);
                     i.putExtra("currentlevel",currentlevel);
                     i.putExtra("correctstring",thestring);
+                    i.putExtra("players", players);
                     startActivity(i);
-                }
-                else {
+                } else {
                     Intent i = new Intent(StartActivity.this, Wrongscreen.class);
-                    i.putExtra("correctsequence",thestring);
+                    i.putExtra("score",String.valueOf(str2.length()));
+                    i.putExtra("correctstring",thestring);
+                    i.putStringArrayListExtra("players", players);
                     startActivity(i);
                 }
             }

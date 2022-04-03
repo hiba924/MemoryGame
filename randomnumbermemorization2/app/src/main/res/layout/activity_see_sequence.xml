@@ -33,11 +33,11 @@
       android:layout_width="260dp"
       android:layout_height="50dp"
       android:text="OK"
+      app:backgroundTint="#96949C"
       app:layout_constraintBottom_toBottomOf="parent"
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintTop_toTopOf="@id/thesequence"
-      app:layout_constraintVertical_bias="0.13"
 
-      />
+      app:layout_constraintVertical_bias="0.13" />
 </androidx.constraintlayout.widget.ConstraintLayout>
